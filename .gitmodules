@@ -1,6 +1,3 @@
 [submodule "glfw"]
 	path = glfw
 	url = https://github.com/glfw/glfw	
-[submodule "GLFont"]
-	path = GLFont
-	url = https://github.com/jtberglund/GLFont

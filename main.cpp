@@ -7,8 +7,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char *, int nSh
     GLFWwindow *window;
     int windowSizeW = 640, windowSizeH = 480;
 
-    // shared_ptr<GLFont> glFont = shared_ptr<GLFont>(new GLFont(".../myFont.ttf"));
-
     // initialize the library
     if (!glfwInit())
         return -1;
@@ -51,7 +49,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char *, int nSh
     glfwShowWindow(window);
 
     // uncomment following line to see the border of window
-    glfwSetWindowAttrib(window, GLFW_DECORATED, GLFW_FALSE);
+    glfwSetWindowAttrib(window, GLFW_DECORATED, GLFW_TRUE);
 
     float fAngle = 0.0f;
 
@@ -59,12 +57,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char *, int nSh
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */
-        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-
-        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+        glClearColor(0.0f, 0.0f, 0.0f, 0.2f);
+        glClearColor(0.0f, 0.0f, 0.0f, 0.2f);
         glClear(GL_COLOR_BUFFER_BIT);
         glLoadIdentity();
-        glBegin(GL_QUADS);
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
